@@ -1,6 +1,5 @@
 {
   "name": "React_template",
-  "packageManager": "yarn@4.1.0",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -83,7 +82,6 @@
   },
   "engines": {
     "node": ">=22",
-    "npm": "please-use-yarn",
     "yarn": ">= 4"
   },
   "homepage": "https://Safyann.github.io/quiz"
