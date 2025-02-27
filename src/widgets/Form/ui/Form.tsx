@@ -36,7 +36,13 @@ export const Form: FC<FormProps> = ({ setFinished }) => {
   };
   return (
     <>
-      <video className={style.video} src="/quiz/OPENING.webm" autoPlay muted />
+      <video
+        className={style.video}
+        src="/quiz/OPENING.webm"
+        autoPlay
+        muted
+        loop
+      />
       {isError && <div className={style.error}></div>}
       <h2 className={style.title}>
         {currentQuestion > 2 && <img src="/quiz/alex.png" alt="" />}

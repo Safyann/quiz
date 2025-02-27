@@ -20,7 +20,7 @@ export const Button = ({
         <path
           d="M2.1846 42.5L45.5964 1.5H299.357L338.428 42.5L299.357 83.5H45.5964L2.1846 42.5Z"
           stroke="currentColor"
-          stroke-width="3"
+          strokeWidth="3"
         />
       </svg>
 
