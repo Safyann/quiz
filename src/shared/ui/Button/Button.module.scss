@@ -1,42 +1,36 @@
 .button {
   font-family: $default-font-family;
-  font-weight: 700;
-  border: 0;
-  border-radius: 3em;
   cursor: pointer;
   display: inline-block;
-  line-height: 1;
   text-transform: lowercase;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 41.7px;
+  letter-spacing: 0;
+  padding: 22px 102px;
+  transition: all 0.3s;
+  position: relative;
+  white-space: nowrap;
 
   &::first-letter {
     text-transform: uppercase;
   }
 
-  // color
-  &--primary {
-    color: white;
-    background-color: #1ea7fd;
-  }
+  &:hover {
+    color: #f0742c;
 
-  &--secondary {
-    color: #333;
-    background-color: transparent;
-    box-shadow: rgb(0 0 0 / 15%) 0 0 0 1px inset;
+    .svg {
+      color: #f0742c;
+    }
   }
+}
 
-  // size
-  &--small {
-    font-size: 12px;
-    padding: 10px 16px;
-  }
-
-  &--medium {
-    font-size: 14px;
-    padding: 11px 20px;
-  }
-
-  &--large {
-    font-size: 16px;
-    padding: 12px 24px;
-  }
+.svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #b9b9b9;
+  transition: all 0.3s;
 }

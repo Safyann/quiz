@@ -1,0 +1,24 @@
+.video {
+  width: 50%;
+  max-height: 100%;
+}
+
+.images {
+  display: flex;
+  gap: 19px;
+  margin-bottom: 80px;
+}
+
+.title {
+  font-size: 83.73px;
+  line-height: 96.98px;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.bg {
+  position: absolute;
+  bottom: 120px;
+  left: 0;
+  width: 100%;
+}
