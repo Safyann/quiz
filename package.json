@@ -3,6 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "packageManager": "yarn@4.1.0",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -80,9 +81,10 @@
     "vite": "^6.0.3",
     "vitest": "^2.1.8"
   },
+  "homepage": "https://Safyann.github.io/quiz",
   "engines": {
-    "node": ">=22",
+    "node": ">=20",
+    "npm": "please-use-yarn",
     "yarn": ">= 4"
-  },
-  "homepage": "https://Safyann.github.io/quiz"
+  }
 }
