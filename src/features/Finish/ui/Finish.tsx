@@ -11,7 +11,7 @@ export const Finish: FC = () => {
       {!isEndedVideo ? (
         <video
           className={styles.video}
-          src="/OPENING.webm"
+          src="/quiz/OPENING.webm"
           autoPlay
           muted
           onEnded={() => setIsEndedVideo(true)}
@@ -19,9 +19,9 @@ export const Finish: FC = () => {
       ) : (
         <>
           <div className={styles.images}>
-            <img src="/nat.png" alt="" />
-            <img src="/alex.png" alt="" />
-            <img src="/alena.png" alt="" />
+            <img src="/quiz/nat.png" alt="" />
+            <img src="/quiz/alex.png" alt="" />
+            <img src="/quiz/alena.png" alt="" />
           </div>
           <h2 className={styles.title}>
             Чучело сгорело <br />А теперь дальше работать

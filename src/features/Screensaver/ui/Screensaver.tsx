@@ -10,7 +10,7 @@ export const Screensaver: FC<ScreensaverProps> = ({ setIsEnded }) => {
   return (
     <video
       className={styles.video}
-      src="/OPENING.webm"
+      src="/quiz/OPENING.webm"
       autoPlay
       muted
       onEnded={() => setIsEnded(true)}
