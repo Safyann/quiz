@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { Content } from "~/features/Content";
 import { Preloader } from "~/features/Preloader";
@@ -9,6 +9,8 @@ import { Screensaver } from "~/features/Screensaver";
 export const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [isEndedVideo, setIsEndedVideo] = useState(false);
+
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
     // let loadedCount = 0;
@@ -27,6 +29,23 @@ export const Home = () => {
     }, 4000);
   }, []);
 
+  useEffect(() => {
+    const playAudio = () => {
+      if (audioRef.current) {
+        audioRef.current
+          .play()
+          .catch((error) => console.log("Autoplay blocked:", error));
+      }
+    };
+
+    // Запускаем музыку при первом взаимодействии пользователя
+    document.addEventListener("click", playAudio, { once: true });
+
+    return () => {
+      document.removeEventListener("click", playAudio);
+    };
+  }, []);
+
   if (isLoading) {
     return <Preloader />;
   }
@@ -38,6 +57,11 @@ export const Home = () => {
       ) : (
         <Content />
       )}
+      <audio
+        ref={audioRef}
+        src="/quiz/vo-sadu-li-v-ogorode.mp3"
+        preload="auto"
+      />
     </div>
   );
 };

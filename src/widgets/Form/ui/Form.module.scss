@@ -64,6 +64,7 @@
   @include media-tablet {
     height: 57vw;
     max-height: 100%;
+    min-height: 57vw;
   }
 }
 
@@ -72,6 +73,12 @@
   bottom: 5px;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 1;
+
+  @include media-tablet {
+    height: 57vw;
+    max-height: 100%;
+  }
 }
 
 .earth {
@@ -89,6 +96,13 @@
   height: 278px;
   object-fit: contain;
   object-position: bottom;
+
+  @include media-tablet {
+    width: 60px;
+    height: 178px;
+    left: -20vw;
+    bottom: 10px;
+  }
 }
 
 .ale {
@@ -99,6 +113,13 @@
   height: 278px;
   object-fit: contain;
   object-position: bottom;
+
+  @include media-tablet {
+    width: 91px;
+    height: 178px;
+    right: 10vw;
+    bottom: 10px;
+  }
 }
 
 .nat2 {
@@ -109,6 +130,13 @@
   height: 277px;
   object-fit: contain;
   object-position: bottom;
+
+  @include media-tablet {
+    width: 164px;
+    height: 177px;
+    left: -4vw;
+    bottom: 10px;
+  }
 }
 
 .ale2 {
@@ -119,12 +147,26 @@
   height: 277px;
   object-fit: contain;
   object-position: bottom;
+
+  @include media-tablet {
+    width: 145px;
+    height: 177px;
+    right: -2vw;
+    bottom: 10px;
+  }
 }
 
 .nat3 {
   left: 30vw;
+
+  @include media-tablet {
+    left: -4vw;
+  }
 }
 
 .ale3 {
   right: 30vw;
+  @include media-tablet {
+    right: -2vw;
+  }
 }

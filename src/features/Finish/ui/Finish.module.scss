@@ -40,6 +40,10 @@
   left: 50%;
   transform: translateX(-50%);
   width: 450px;
+
+  @include media-tablet {
+    width: 200px;
+  }
 }
 
 .earth {
@@ -56,6 +60,11 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
+
+  @include media-tablet {
+    width: 200px;
+    bottom: 120px;
+  }
 }
 
 .video {
@@ -63,6 +72,10 @@
   position: absolute;
   bottom: 160px;
   left: 50%;
+
+  @include media-tablet {
+    bottom: 120px;
+  }
 }
 
 .chucelo {
@@ -71,4 +84,10 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
+
+  @include media-tablet {
+    height: 57vw;
+    max-height: 100%;
+    bottom: 120px;
+  }
 }
