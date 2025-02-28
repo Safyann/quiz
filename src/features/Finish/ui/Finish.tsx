@@ -1,15 +1,21 @@
 import { FC, useEffect, useState } from "react";
 
+import { motion } from "framer-motion";
+
 import styles from "./Finish.module.scss";
 
 export const Finish: FC = () => {
   const [isEndedVideo, setIsEndedVideo] = useState(false);
   const [isFireEnd, setIsFireEnd] = useState(false);
+  const [isEnd, setIsEnd] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
+      setIsEnd(true);
+    }, 10000);
+    setTimeout(() => {
       setIsEndedVideo(true);
-    }, 6000);
+    }, 8000);
     setTimeout(() => {
       setIsFireEnd(true);
     }, 4000);
@@ -18,7 +24,13 @@ export const Finish: FC = () => {
   return (
     <>
       {!isEndedVideo ? (
-        <div className={styles.step1}>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.7 }}
+          className={styles.step1}
+        >
           <img
             className={styles.chucelo}
             src={isFireEnd ? "/quiz/12221212.png" : "/quiz/1112222.png"}
@@ -34,9 +46,14 @@ export const Finish: FC = () => {
             muted
             loop
           ></video>
-        </div>
-      ) : (
-        <>
+        </motion.div>
+      ) : null}
+      {isEnd && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.7 }}
+        >
           <div className={styles.images}>
             <img src="/quiz/nat.png" alt="" />
             <img src="/quiz/alex.png" alt="" />
@@ -54,7 +71,7 @@ export const Finish: FC = () => {
             loop
             muted
           />
-        </>
+        </motion.div>
       )}
     </>
   );
