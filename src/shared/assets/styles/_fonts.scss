@@ -1,3 +1,10 @@
 @import "mixins";
 
-// @include font-face('Manrope', '../fonts/Manrope-Regular', 400, normal, ttf);
+// @include font-face('Durance', '../fonts/Durance-Flower', 400, normal, otf);
+
+@font-face {
+  font-family: "Durance";
+  src:
+    local("Durance"),
+    url("../fonts/Durance-Rock.otf") format("opentype");
+}
