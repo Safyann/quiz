@@ -27,17 +27,17 @@ export const Home = () => {
     }, 4000);
   }, []);
 
-  // if (isLoading) {
-  //   return <Preloader />;
-  // }
+  if (isLoading) {
+    return <Preloader />;
+  }
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen  size-full">
-      {/* {!isEndedVideo ? (
+      {!isEndedVideo ? (
         <Screensaver setIsEnded={setIsEndedVideo} />
-      ) : ( */}
-      <Content />
-      {/* )} */}
+      ) : (
+        <Content />
+      )}
     </div>
   );
 };

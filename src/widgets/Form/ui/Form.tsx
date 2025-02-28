@@ -1,6 +1,7 @@
 import { Dispatch, FC, SetStateAction, useEffect, useState } from "react";
 
 import classNames from "classnames";
+import { motion } from "framer-motion";
 
 import { Button } from "~/shared/ui/Button";
 
@@ -36,14 +37,52 @@ export const Form: FC<FormProps> = ({ setFinished }) => {
   };
   return (
     <>
-      <video
-        className={style.video}
-        src="/quiz/OPENING.mp4"
-        autoPlay
-        muted
-        loop
-      />
-      <img className={style.earth} src="/quiz/earth.png" alt="" />
+      <div className={style.imgs}>
+        <img
+          className={style.chcuelo}
+          src={currentQuestion > 5 ? "/quiz/123.png" : "/quiz/1112222.png"}
+          alt=""
+        />
+        <img className={style.earth} src="/quiz/earth.png" alt="" />
+        {currentQuestion > 0 && currentQuestion <= 3 && (
+          <motion.img
+            className={style.nat}
+            src="/quiz/11.png"
+            alt=""
+            initial={{ x: 0 }}
+            animate={{ x: 100 }}
+            transition={{ duration: 0.7 }}
+          />
+        )}
+        {currentQuestion > 1 && currentQuestion <= 4 && (
+          <motion.img
+            className={style.ale}
+            src="/quiz/21.png"
+            alt=""
+            initial={{ x: 100 }}
+            animate={{ x: 0 }}
+            transition={{ duration: 0.7 }}
+          />
+        )}
+        {currentQuestion > 3 && (
+          <img
+            className={classNames(style.nat2, {
+              [style.nat3]: currentQuestion > 5,
+            })}
+            src="/quiz/12.png"
+            alt=""
+          />
+        )}
+        {currentQuestion > 4 && (
+          <img
+            className={classNames(style.ale2, {
+              [style.ale3]: currentQuestion > 5,
+            })}
+            src="/quiz/22.png"
+            alt=""
+          />
+        )}
+      </div>
       {isError && <div className={style.error}></div>}
       <div className={style.title}>
         {currentQuestion > 2 && (

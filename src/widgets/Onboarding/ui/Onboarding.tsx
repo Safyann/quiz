@@ -2,11 +2,13 @@ import { FC, useState, useEffect } from "react";
 
 import { motion, AnimatePresence } from "framer-motion";
 
+import { toNbsp } from "~/shared/lib/tools/toNbsp";
+
 import styles from "./Onboarding.module.scss";
 
 const texts = [
   "Канистры заполнены, спички в кармане",
-  " Но, чтобы сжечь чучело, нужно ответить на несколько вопросов",
+  "Но, чтобы сжечь чучело, нужно ответить на несколько вопросов",
 ];
 
 export const Onboarding: FC = () => {
@@ -29,7 +31,7 @@ export const Onboarding: FC = () => {
         transition={{ duration: 0.7 }}
         className={styles.title}
       >
-        {texts[index]}
+        {toNbsp(texts[index])}
       </motion.div>
     </AnimatePresence>
   );

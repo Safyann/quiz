@@ -1,13 +1,3 @@
-.video {
-  width: 100%;
-  max-height: 50vh;
-
-  @include media-tablet {
-    height: 57vw;
-    max-height: 100%;
-  }
-}
-
 .title {
   font-size: clamp(24px, 4vw, 45px);
   letter-spacing: 0;
@@ -65,6 +55,75 @@
   opacity: 0.2;
 }
 
+.imgs {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+
+  @include media-tablet {
+    height: 57vw;
+    max-height: 100%;
+  }
+}
+
+.chcuelo {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .earth {
   width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.nat {
+  position: absolute;
+  bottom: 30px;
+  left: 20vw;
+  width: 160px;
+  height: 278px;
+  object-fit: contain;
+  object-position: bottom;
+}
+
+.ale {
+  position: absolute;
+  bottom: 30px;
+  right: 20vw;
+  width: 191px;
+  height: 278px;
+  object-fit: contain;
+  object-position: bottom;
+}
+
+.nat2 {
+  position: absolute;
+  bottom: 30px;
+  left: 20vw;
+  width: 364px;
+  height: 277px;
+  object-fit: contain;
+  object-position: bottom;
+}
+
+.ale2 {
+  position: absolute;
+  bottom: 30px;
+  right: 20vw;
+  width: 307px;
+  height: 277px;
+  object-fit: contain;
+  object-position: bottom;
+}
+
+.nat3 {
+  left: 30vw;
+}
+
+.ale3 {
+  right: 30vw;
 }
