@@ -7,13 +7,17 @@
   display: flex;
   gap: 19px;
   margin-bottom: 80px;
+
+  @include media-tablet {
+    margin-bottom: 40px;
+  }
 }
 
 .title {
-  font-size: 83.73px;
-  line-height: 96.98px;
+  font-size: clamp(36px, 5vw, 84px);
   letter-spacing: 0;
   text-align: center;
+  padding: 0 16px;
 }
 
 .bg {
@@ -21,4 +25,8 @@
   bottom: 120px;
   left: 0;
   width: 100%;
+
+  @include media-tablet {
+    bottom: 60px;
+  }
 }

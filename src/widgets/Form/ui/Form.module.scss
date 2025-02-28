@@ -1,19 +1,35 @@
 .video {
   width: 100%;
   max-height: 50vh;
+
+  @include media-tablet {
+    height: 57vw;
+    max-height: 100%;
+  }
 }
 
 .title {
-  font-size: 44.57px;
-  line-height: 51.62px;
+  font-size: clamp(24px, 4vw, 45px);
   letter-spacing: 0;
   text-align: center;
   margin-bottom: 42px;
   color: #f0742c;
   max-width: 1200px;
+  padding: 0 16px;
   display: flex;
   gap: 27px;
   align-items: center;
+
+  @include media-tablet {
+    gap: 14px;
+    margin-bottom: 21px;
+  }
+}
+
+.img {
+  @include media-tablet {
+    width: 50px;
+  }
 }
 
 .grid {
@@ -23,6 +39,11 @@
   row-gap: 17px;
   margin: 0 auto;
   max-width: 1200px;
+  margin-bottom: 24px;
+
+  @include media-tablet {
+    grid-template-columns: 1fr;
+  }
 }
 
 .list {
@@ -31,6 +52,7 @@
   row-gap: 17px;
   align-items: center;
   width: auto;
+  margin-bottom: 24px;
 }
 
 .error {

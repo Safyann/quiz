@@ -4,10 +4,9 @@
   display: inline-block;
   text-transform: lowercase;
   font-weight: 400;
-  font-size: 36px;
-  line-height: 41.7px;
+  font-size: clamp(18px, 2vw, 36px);
   letter-spacing: 0;
-  padding: 22px 102px;
+  padding: clamp(12px, 2vw, 22px) clamp(50px, 5vw, 102px);
   transition: all 0.3s;
   position: relative;
   white-space: nowrap;
@@ -33,4 +32,9 @@
   height: 100%;
   color: #b9b9b9;
   transition: all 0.3s;
+}
+
+.text {
+  z-index: 1;
+  position: relative;
 }

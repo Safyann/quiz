@@ -24,7 +24,7 @@ export const Button = ({
         />
       </svg>
 
-      <div className={classes.text}>{children}</div>
+      <span className={classes.text}>{children}</span>
     </button>
   );
 };

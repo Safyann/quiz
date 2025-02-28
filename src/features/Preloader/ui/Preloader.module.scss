@@ -1,5 +1,4 @@
 .text {
-  font-size: 44.57px;
-  line-height: 51.62px;
+  font-size: clamp(24px, 4vw, 45px);
   letter-spacing: 0;
 }

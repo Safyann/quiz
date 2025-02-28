@@ -44,10 +44,12 @@ export const Form: FC<FormProps> = ({ setFinished }) => {
         loop
       />
       {isError && <div className={style.error}></div>}
-      <h2 className={style.title}>
-        {currentQuestion > 2 && <img src="/quiz/alex.png" alt="" />}
-        {questions[currentQuestion].question}
-      </h2>
+      <div className={style.title}>
+        {currentQuestion > 2 && (
+          <img className={style.img} src="/quiz/alex.png" alt="" />
+        )}
+        <h2 className={style.text}>{questions[currentQuestion].question}</h2>
+      </div>
       <div
         className={classNames({
           [style.grid]: questions[currentQuestion].options.length === 4,
