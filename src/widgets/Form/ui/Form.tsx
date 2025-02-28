@@ -38,11 +38,12 @@ export const Form: FC<FormProps> = ({ setFinished }) => {
     <>
       <video
         className={style.video}
-        src="/quiz/OPENING.webm"
+        src="/quiz/OPENING.mp4"
         autoPlay
         muted
         loop
       />
+      <img className={style.earth} src="/quiz/earth.png" alt="" />
       {isError && <div className={style.error}></div>}
       <div className={style.title}>
         {currentQuestion > 2 && (

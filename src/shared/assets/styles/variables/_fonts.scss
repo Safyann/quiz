@@ -1,5 +1,10 @@
 // Fonts
-$default-font-family: Durance, sans-serif;
+$default-font-family: Miroslav, sans-serif;
 $default-font-weight: 400;
 $medium-font-weight: 500;
 $semi-bold-font-weight: 600;
+
+@font-face {
+  font-family: "Miroslav";
+  src: url("../../fonts/Mirosla.ttf") format("truetype");
+}

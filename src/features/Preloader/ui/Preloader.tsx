@@ -18,7 +18,7 @@ export function Preloader() {
   }, []);
   return (
     <div className="flex flex-col items-center justify-center min-h-screen  size-full">
-      <video src="/quiz/PRELOADER.webm" autoPlay loop muted />
+      <video src="/quiz/PRELOADER.mp4" autoPlay loop muted />
       <AnimatePresence mode="wait">
         <motion.div
           key={texts[index]}

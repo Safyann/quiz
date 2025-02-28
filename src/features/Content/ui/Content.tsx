@@ -7,7 +7,7 @@ import { Finish } from "~/features/Finish";
 
 export const Content: FC = () => {
   const [step, setStep] = useState(1);
-  const [finished, setFinished] = useState(false);
+  const [finished, setFinished] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
@@ -15,9 +15,9 @@ export const Content: FC = () => {
     }, 6000);
   }, []);
 
-  if (step === 1) {
-    return <Onboarding />;
-  }
+  // if (step === 1) {
+  //   return <Onboarding />;
+  // }
 
   return <>{!finished ? <Form setFinished={setFinished} /> : <Finish />}</>;
 };

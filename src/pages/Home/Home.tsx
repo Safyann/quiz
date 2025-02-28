@@ -4,7 +4,7 @@ import { Content } from "~/features/Content";
 import { Preloader } from "~/features/Preloader";
 import { Screensaver } from "~/features/Screensaver";
 
-// const videoUrls = ["/quiz/OPENING.webm"];
+// const videoUrls = ["/quiz/OPENING.mp4"];
 
 export const Home = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -27,17 +27,17 @@ export const Home = () => {
     }, 4000);
   }, []);
 
-  if (isLoading) {
-    return <Preloader />;
-  }
+  // if (isLoading) {
+  //   return <Preloader />;
+  // }
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen  size-full">
-      {!isEndedVideo ? (
+      {/* {!isEndedVideo ? (
         <Screensaver setIsEnded={setIsEndedVideo} />
-      ) : (
-        <Content />
-      )}
+      ) : ( */}
+      <Content />
+      {/* )} */}
     </div>
   );
 };

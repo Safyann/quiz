@@ -9,13 +9,15 @@ export const Finish: FC = () => {
   return (
     <>
       {!isEndedVideo ? (
-        <video
-          className={styles.video}
-          src="/quiz/OPENING.webm"
-          autoPlay
-          muted
-          onEnded={() => setIsEndedVideo(true)}
-        />
+        <div className={styles.step1}>
+          <img src="/quiz/1112222.png" alt="" />
+          <video
+            className={styles.fire}
+            src="/quiz/fire.mp4"
+            autoPlay
+            muted
+          ></video>
+        </div>
       ) : (
         <>
           <div className={styles.images}>
